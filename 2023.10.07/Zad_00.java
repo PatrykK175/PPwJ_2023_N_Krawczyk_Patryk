@@ -11,4 +11,4 @@ public class Zad_00
 
             System.out.println("Podwójna wartość liczby " + (2 * liczba));
         }
-}
+}test
