@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zad_01_e {
+public class Zad_01_f {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -8,15 +8,15 @@ public class Zad_01_e {
         int n = scanner.nextInt();
 
         int[] ciag = new int[n];
-        int iloczyn = 1;
+        int suma = 0;
 
         for (int i = 0; i < n; i++) {
             System.out.print("Podaj element ciągu a" + (i + 1) + ": ");
             ciag[i] = scanner.nextInt();
-            iloczyn *= Math.abs(ciag[i]);
+            suma += Math.pow(ciag[i], 2);
         }
 
-        System.out.print("Iloczyn = " + iloczyn);
+        System.out.print("Suma = " + suma);
 
         scanner.close();
     }
