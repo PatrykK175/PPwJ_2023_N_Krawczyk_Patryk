@@ -15,6 +15,8 @@ public class zad4 {
         } else {
             System.out.println("Nieprawidłowy format daty.");
         }
+
+        scanner.close();
     }
 
     private static int getDayOfYear(String date) {

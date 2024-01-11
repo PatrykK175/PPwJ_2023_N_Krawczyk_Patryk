@@ -17,6 +17,8 @@ public class zad5 {
         } else {
             System.out.println("Nieprawidłowy format daty.");
         }
+
+        scanner.close();
     }
 
     private static int obliczRozniceDni(String data1, String data2) {
