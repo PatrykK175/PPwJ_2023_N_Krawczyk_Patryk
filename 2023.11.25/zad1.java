@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class zad1 {
 
-  public static void generate(int tab[], int n, int minValue, int maxValue) {
+  public static void generate(int tab[], int minValue, int maxValue, int dlugoscTablicy) {
     Random randomArray = new Random();
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < dlugoscTablicy; i++) {
       tab[i] = randomArray.nextInt(maxValue - minValue + 1) + minValue;
     }
   }
@@ -148,19 +148,20 @@ public class zad1 {
   }
 
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    Scanner drzewo = new Scanner(System.in);
     System.out.print("Podaj dlugosc tablicy: ");
-    int lengthOfList = scanner.nextInt();
+    int lengthOfList = drzewo.nextInt();
 
     System.out.print("Podaj poczatkowy zakres tablicy: ");
-    int startArray = scanner.nextInt();
+    int startArray = drzewo.nextInt();
 
     System.out.print("Podaj koncowy zakres tablicy: ");
-    int endArray = scanner.nextInt();
+    int endArray = drzewo.nextInt();
 
     int[] arr = new int[lengthOfList];
 
-    generate(arr, lengthOfList, startArray, endArray);
+    generate(arr, startArray, endArray, lengthOfList);
+    
     for (int i = 0; i < arr.length; i++) {
       System.out.println(arr[i]);
     }
@@ -185,6 +186,6 @@ public class zad1 {
     System.out.println("Suma ujemnych liczb w tablicy: " + sumaUjemnych);
     System.out.println("Długość maksymalnego ciągu dodatnich: " + dlugoscMaksymalnegoCiaguDodatnich);
     
-    scanner.close();
+    drzewo.close();
   }
 }
